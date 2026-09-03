@@ -20,6 +20,8 @@
     "esbuild": true
   },
   "devDependencies": {
-    "@types/jsdom": "^30.0.0"
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/jsdom": "^30.0.0",
+    "tailwindcss": "^4.3.3"
   }
 }
