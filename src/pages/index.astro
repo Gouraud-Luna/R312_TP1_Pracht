@@ -35,13 +35,13 @@ import olympians from "../assets/olympians.json";
             marks: [
               Plot.dot(pizza, {
                 x: "price",
-                y: "revenue",
+                y: "order",
               })
             ]
           }}
         />
       </div>
-	  <h2 class="mb-4 text-xl font-semibold text-slate-800">Pizza</h2>
+	  <h2 class="mb-4 text-xl font-semibold text-slate-800">Weather</h2>
       <div>
         <PlotFigure
           options={{
@@ -49,6 +49,19 @@ import olympians from "../assets/olympians.json";
               Plot.dot(weather,{
                 x: "temp_max",
                 y: "temp_min",
+              })
+            ]
+          }}
+        />
+      </div>
+	  <h2 class="mb-4 text-xl font-semibold text-slate-800">Olympians</h2>
+      <div>
+        <PlotFigure
+          options={{
+            marks: [
+              Plot.dot(olympians,{
+                x: "weight",
+                y: "height",
               })
             ]
           }}
