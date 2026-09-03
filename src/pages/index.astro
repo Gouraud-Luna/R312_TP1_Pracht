@@ -4,6 +4,8 @@ import PlotFigure from '../components/PlotFigure.astro';
 import * as Plot from "@observablehq/plot";
 import penguins from "../assets/penguins.json";
 import pizza from "../assets/pizza.json";
+import weather from "../assets/weather.json";
+import olympians from "../assets/olympians.json";
 ---
 
 <Layout>
@@ -25,7 +27,8 @@ import pizza from "../assets/pizza.json";
             ]
           }}
         />
-      </div><h2 class="mb-4 text-xl font-semibold text-slate-800">Pizza</h2>
+      </div>
+	  <h2 class="mb-4 text-xl font-semibold text-slate-800">Pizza</h2>
       <div>
         <PlotFigure
           options={{
@@ -33,6 +36,19 @@ import pizza from "../assets/pizza.json";
               Plot.dot(pizza, {
                 x: "price",
                 y: "revenue",
+              })
+            ]
+          }}
+        />
+      </div>
+	  <h2 class="mb-4 text-xl font-semibold text-slate-800">Pizza</h2>
+      <div>
+        <PlotFigure
+          options={{
+            marks: [
+              Plot.dot(weather,{
+                x: "temp_max",
+                y: "temp_min",
               })
             ]
           }}
