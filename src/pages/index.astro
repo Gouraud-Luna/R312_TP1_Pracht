@@ -15,10 +15,11 @@ import olympians from "../assets/olympians.json";
     </header>
 
     <section class="rounded-lg border border-slate-200 bg-white p-4 shadow-xl">    
-      <h2 class="mb-4 text-xl font-semibold text-slate-800">Mesure de nageoir</h2>
       <div>
         <PlotFigure
           options={{
+			title:"Penguins",
+			caption:"Le graphique montre la largeur (en ordonnées) et la longeur (en absisses) de pingouins",
             marks: [
               Plot.dot(penguins, {
                 x: "culmen_length_mm",
@@ -28,23 +29,25 @@ import olympians from "../assets/olympians.json";
           }}
         />
       </div>
-	  <h2 class="mb-4 text-xl font-semibold text-slate-800">Pizza</h2>
       <div>
         <PlotFigure
           options={{
+			title:"Pizza",
+			caption:"Le graphique représente les commandes par prix",
             marks: [
               Plot.dot(pizza, {
                 x: "price",
-                y: "order",
+                y: "orders",
               })
             ]
           }}
         />
       </div>
-	  <h2 class="mb-4 text-xl font-semibold text-slate-800">Weather</h2>
       <div>
         <PlotFigure
           options={{
+			title:"Météo",
+			caption:"Le graphique montre la température minimum (en ordonnées) et la température maximum (en absisses)",
             marks: [
               Plot.dot(weather,{
                 x: "temp_max",
@@ -54,10 +57,11 @@ import olympians from "../assets/olympians.json";
           }}
         />
       </div>
-	  <h2 class="mb-4 text-xl font-semibold text-slate-800">Olympians</h2>
       <div>
         <PlotFigure
           options={{
+			title:"Olympians",
+			caption:"Le graphique représente la taille par la hauteur des athlète olympique",
             marks: [
               Plot.dot(olympians,{
                 x: "weight",
